@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import green from "@material-ui/core/colors/green";
-import { textAlign, fontSize } from "@material-ui/system";
 
 const headerColor = green[800];
 
