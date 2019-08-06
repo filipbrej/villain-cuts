@@ -6,6 +6,9 @@ import Typography from "@material-ui/core/Typography";
 
 const styles = {
   image: {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
     width: "100%",
     height: "90vh",
     background: `url(${Background})`,
@@ -18,7 +21,7 @@ const styles = {
   button: {
     backgroundColor: green[800],
     color: "white",
-    left: "600px",
+    // left: "600px",
     padding: "1rem",
     fontSize: "1rem"
   }

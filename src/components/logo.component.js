@@ -1,6 +1,7 @@
 import React from "react";
 import green from "@material-ui/core/colors/green";
 
+// Logo styling
 const styles = {
   color: "#fff",
   backgroundColor: green[800],
@@ -12,6 +13,6 @@ const styles = {
 };
 
 // Logo at top of page
-const header = () => <h1 style={styles}>VillainCuts</h1>;
+const logo = () => <h1 style={styles}>VillainCuts</h1>;
 
-export default header;
+export default logo;
