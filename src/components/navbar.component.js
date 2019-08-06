@@ -1,32 +1,27 @@
 import React, { Component } from "react";
 import brown from "@material-ui/core/colors/brown";
+import AppBar from "@material-ui/core/AppBar";
 import Tab from "@material-ui/core/Tab";
 import Tabs from "@material-ui/core/Tabs";
-import Paper from "@material-ui/core/Paper/Paper";
 import SwipeableViews from "react-swipeable-views";
 
 export default function Navbar() {
   // Styling
-  const styles = theme => ({
-    tabs: {
-      backgroundColor: brown[800],
-      color: brown[800]
-    },
-    indicator: {
-      backgroundColor: "brown"
+  const styles = {
+    appBar: {
+      background: brown[700]
     }
-  });
-
-  const [value, setValue] = React.useState(1);
+  };
 
   // handles when different tabs are clicked
-  function handleChange(event, newValue) {
+  const [value, setValue] = React.useState(1);
+  const handleChange = (event, newValue) => {
     setValue(newValue);
-  }
+  };
 
   return (
     <div>
-      <Paper>
+      <AppBar position="sticky" style={styles.appBar}>
         <Tabs
           centered
           variant="fullWidth"
@@ -37,7 +32,7 @@ export default function Navbar() {
           <Tab label="Home" />
           <Tab label="Portfolio" />
         </Tabs>
-      </Paper>
+      </AppBar>
     </div>
   );
 }
