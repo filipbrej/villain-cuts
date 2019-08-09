@@ -10,7 +10,7 @@ const styles = {
     flexDirection: "column",
     alignItems: "center",
     width: "100%",
-    height: "90vh",
+    height: "85vh",
     background: `url(${Background})`,
     backgroundSize: "cover"
   },
@@ -21,13 +21,14 @@ const styles = {
   button: {
     backgroundColor: green[800],
     color: "white",
-    // left: "600px",
-    padding: "1rem",
-    fontSize: "1rem"
+    padding: "0.8rem",
+    fontSize: "1.2rem"
   }
 };
 
 export default class LandingImage extends Component {
+  // Click button to switch to contact form tab
+  contactButtonClicked = () => {};
   render() {
     return (
       <div style={styles.image}>
@@ -40,7 +41,7 @@ export default class LandingImage extends Component {
           Make an appointment today.
         </Typography>
         <Typography variant="button" align="center">
-          <Button style={styles.button}>Make an appointment</Button>
+          <Button style={styles.button}>Contact Me</Button>
         </Typography>
       </div>
     );

@@ -21,18 +21,13 @@ export default function Navbar() {
 
   return (
     <div>
-      <AppBar position="sticky" style={styles.appBar}>
-        <Tabs
-          centered
-          variant="fullWidth"
-          value={value}
-          onChange={handleChange}
-        >
-          <Tab label="Contact" />
-          <Tab label="Home" />
-          <Tab label="Portfolio" />
-        </Tabs>
-      </AppBar>
+      {/* <AppBar position="sticky" style={styles.appBar}> */}
+      <Tabs centered variant="fullWidth" value={value} onChange={handleChange}>
+        <Tab label="Contact" />
+        <Tab label="Home" />
+        <Tab label="Portfolio" />
+      </Tabs>
+      {/* </AppBar> */}
     </div>
   );
 }

@@ -8,6 +8,7 @@ const styles = {
   fontFamily: "Pacifico",
   textAlign: "center",
   fontSize: "4rem",
+  lineHeight: "1.4",
   margin: "0",
   padding: "0"
 };
