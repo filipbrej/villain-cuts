@@ -1,4 +1,5 @@
 import React from "react";
+import Box from "@material-ui/core/Box";
 import Typography from "@material-ui/core/Typography";
 import Paper from "@material-ui/core/Paper";
 
@@ -7,16 +8,12 @@ const styles = {
     minHeight: "150px",
     width: "30%",
     margin: "1rem"
-  },
-  container: {
-    display: "flex",
-    flexDirection: "row"
   }
 };
 
 const InfoCards = () => {
   return (
-    <div style={styles.container}>
+    <Box display="flex">
       <Paper style={styles.paper} elevation="3">
         <Typography variant="h6" align="center">
           Your style. Your way.
@@ -41,7 +38,7 @@ const InfoCards = () => {
           Haircuts starting for as little as $10.
         </Typography>
       </Paper>
-    </div>
+    </Box>
   );
 };
 

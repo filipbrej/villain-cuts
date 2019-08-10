@@ -1,6 +1,5 @@
 import React from "react";
 import green from "@material-ui/core/colors/green";
-import Paper from "@material-ui/core/Paper";
 // Logo styling
 const styles = {
   color: "#fff",
@@ -15,9 +14,5 @@ const styles = {
 
 // Logo at top of page
 export default function Logo() {
-  return (
-    <Paper elevation="3">
-      <h1 style={styles}>VillainCuts</h1>
-    </Paper>
-  );
+  return <h1 style={styles}>VillainCuts</h1>;
 }
