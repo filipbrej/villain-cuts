@@ -16,7 +16,8 @@ const styles = {
   },
   text: {
     paddingTop: "10rem",
-    color: "white"
+    color: "white",
+    margin: "2rem 1rem"
   },
   button: {
     backgroundColor: green[800],
@@ -26,22 +27,15 @@ const styles = {
   }
 };
 
-export default class Home extends Component {
-  // Click button to switch to contact form tab
-  contactButtonClicked = () => {};
-  render() {
-    return (
-      <div style={styles.image}>
-        <Typography
-          style={styles.text}
-          align="center"
-          gutterBottom="true"
-          variant="h2"
-        >
-          Make an appointment today.
-        </Typography>
-        <Button style={styles.button}>Contact Me</Button>
-      </div>
-    );
-  }
-}
+const Home = () => {
+  return (
+    <div style={styles.image}>
+      <Typography style={styles.text} align="center" variant="h3">
+        Make an appointment today.
+      </Typography>
+      <Button style={styles.button}>Contact Me</Button>
+    </div>
+  );
+};
+
+export default Home;
