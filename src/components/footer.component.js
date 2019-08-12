@@ -10,8 +10,8 @@ import Typography from "@material-ui/core/Typography";
 
 const styles = {
   link: {
-    margin: "0 1rem",
-    fontSize: "3rem",
+    margin: "1rem 1.5rem",
+    fontSize: "4rem",
     color: "black"
   }
 };
@@ -24,9 +24,7 @@ const Footer = () => {
       alignItems="center"
       justifyItems="center"
     >
-      <Typography align="center" variant="h4">
-        Follow us on social media!
-      </Typography>
+      <Typography variant="h4">Follow us on social media!</Typography>
       <Typography>
         <Link
           target="_blank"
@@ -44,7 +42,7 @@ const Footer = () => {
         </Link>
       </Typography>
       <Typography variant="caption" color="textSecondary">
-        Powered/Designed by Fi Studios, LLC.
+        Designed & Developed by Fi Studios, LLC.
       </Typography>
     </Box>
   );

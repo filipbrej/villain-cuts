@@ -1,11 +1,12 @@
 import React from "react";
 
 // Components
-import Header from "./components/logo.component";
-import Navbar from "./components/navbar.component";
-import Home from "./components/home.component";
+import Header from "./components/Logo.component";
+import Navbar from "./components/Navbar.component";
+import Home from "./components/Home.component";
+import Contact from "./components/Contact.component";
 import InfoCards from "./components/InfoCards.component";
-import Footer from "./components/footer.component";
+import Footer from "./components/Footer.component";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Navbar />
       <Home />
       <InfoCards />
+      <Contact />
       <Footer />
     </div>
   );
