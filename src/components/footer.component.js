@@ -27,22 +27,22 @@ const Footer = () => {
       <Typography align="center" variant="h4">
         Follow us on social media!
       </Typography>
-      <Box>
-        <Typography>
-          <Link
-            style={styles.link}
-            href="https://www.facebook.com/VillainCuts/"
-          >
-            <FontAwesomeIcon icon={faFacebookSquare} />
-          </Link>
-          <Link
-            style={styles.link}
-            href="https://www.instagram.com/villaincuts/"
-          >
-            <FontAwesomeIcon icon={faInstagram} />
-          </Link>
-        </Typography>
-      </Box>
+      <Typography>
+        <Link
+          target="_blank"
+          style={styles.link}
+          href="https://www.facebook.com/VillainCuts/"
+        >
+          <FontAwesomeIcon icon={faFacebookSquare} />
+        </Link>
+        <Link
+          target="_blank"
+          style={styles.link}
+          href="https://www.instagram.com/villaincuts/"
+        >
+          <FontAwesomeIcon icon={faInstagram} />
+        </Link>
+      </Typography>
       <Typography variant="caption" color="textSecondary">
         Powered/Designed by Fi Studios, LLC.
       </Typography>

@@ -13,12 +13,7 @@ const styles = {
 
 const InfoCards = () => {
   return (
-    <Box
-      className="card-container"
-      display="flex"
-      justifyContent="center"
-      className=""
-    >
+    <Box display="flex" justifyContent="center">
       <Paper style={styles.card} elevation="3">
         <Typography variant="h6" align="center">
           Your style. Your way.

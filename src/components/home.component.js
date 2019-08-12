@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import Background from "../img/background.jpg";
 import Button from "@material-ui/core/Button";
 import green from "@material-ui/core/colors/green";
