@@ -16,7 +16,7 @@ const InfoCards = () => {
     <Box display="flex" justifyContent="center">
       <Paper style={styles.card} elevation="3">
         <Typography variant="h6" align="center">
-          Your style. Your way.
+          A cut above the rest.
         </Typography>
         <Typography color="textSecondary" align="center">
           Haircuts starting for as little as $10.
