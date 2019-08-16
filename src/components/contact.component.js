@@ -15,8 +15,7 @@ const styles = {
     margin: "1rem",
     display: "flex",
     alignItems: "center",
-    justifyContent: "center",
-    minWidth: "50%"
+    justifyContent: "center"
   },
   root: {
     margin: "1rem",
@@ -28,6 +27,9 @@ const styles = {
     color: green[800],
     padding: "0.8rem",
     fontSize: "1rem"
+  },
+  textfield: {
+    minWidth: "75%"
   }
 };
 
@@ -94,7 +96,7 @@ class ContactForm extends React.Component {
     const { classes } = this.props;
     return (
       <Box className={classes.container}>
-        <Paper elevation="3" style={{ minWidth: "30%" }}>
+        <Paper elevation="3" style={{ minWidth: "40%" }}>
           <form method="POST" className={classes.root}>
             <Typography variant="h4">CONTACT ME</Typography>
             <Typography variant="subtitle1">
@@ -102,22 +104,22 @@ class ContactForm extends React.Component {
             </Typography>
 
             <ContactTextField
-              fullWidth
+              style={styles.textfield}
               required
               margin="normal"
               variant="outlined"
               label="Full Name"
             />
             <ContactTextField
+              style={styles.textfield}
               type="email"
-              fullWidth
               required
               margin="normal"
               variant="outlined"
               label="Email"
             />
             <ContactTextField
-              fullWidth
+              style={styles.textfield}
               required
               variant="outlined"
               label="Phone Number"
@@ -129,7 +131,7 @@ class ContactForm extends React.Component {
               }}
             />
             <ContactTextField
-              fullWidth
+              style={styles.textfield}
               required
               margin="normal"
               multiline

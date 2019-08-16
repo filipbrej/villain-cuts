@@ -3,8 +3,7 @@ import Box from "@material-ui/core/Box";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faInstagram,
-  faFacebookSquare,
-  faBlackTie
+  faFacebookSquare
 } from "@fortawesome/free-brands-svg-icons";
 import grey from "@material-ui/core/colors/grey";
 import Link from "@material-ui/core/Link";
