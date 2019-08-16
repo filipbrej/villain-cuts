@@ -1,5 +1,6 @@
 import React from "react";
 import green from "@material-ui/core/colors/green";
+import Typography from "@material-ui/core/Typography";
 // Logo styling
 const styles = {
   color: "#fff",

@@ -10,7 +10,7 @@ const styles = {
     flexDirection: "column",
     alignItems: "center",
     width: "100%",
-    height: "calc(90vh - 137px)",
+    height: "calc(95vh - 137px)",
     background: `url(${Background})`,
     backgroundSize: "cover"
   },
