@@ -1,5 +1,6 @@
 import React from 'react';
 import Box from '@material-ui/core/Box';
+import { makeStyles } from '@material-ui/core/styles';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
     faInstagram,
@@ -9,19 +10,18 @@ import grey from '@material-ui/core/colors/grey';
 import Link from '@material-ui/core/Link';
 import Typography from '@material-ui/core/Typography';
 
-const styles = {
+const useStyles = makeStyles({
     link: {
         margin: '1rem 1.5rem',
-        fontSize: '4rem',
-        color: 'black'
+        color: '#000'
     },
     logo: {
-        textDecoration: 'none',
         color: grey[600]
     }
-};
+});
 
 const Footer = () => {
+    const classes = useStyles();
     return (
         <Box
             display='flex'
@@ -29,33 +29,34 @@ const Footer = () => {
             alignItems='center'
             justifyItems='center'
         >
-            <Typography align='center' variant='h4'>
+            {/* <Typography align='center' variant='h4'>
                 Follow us on social media!
-            </Typography>
-            <Typography>
+            </Typography> */}
+            <Typography gutterBottom>
                 <Link
                     target='_blank'
-                    style={styles.link}
+                    className={classes.link}
                     href='https://www.facebook.com/VillainCuts/'
                 >
-                    <FontAwesomeIcon icon={faFacebookSquare} />
+                    <FontAwesomeIcon size='3x' icon={faFacebookSquare} />
                 </Link>
                 <Link
                     target='_blank'
-                    style={styles.link}
+                    className={classes.link}
                     href='https://www.instagram.com/villaincuts/'
                 >
-                    <FontAwesomeIcon icon={faInstagram} />
+                    <FontAwesomeIcon size='3x' icon={faInstagram} />
                 </Link>
             </Typography>
             <Typography gutterBottom variant='caption' color='textSecondary'>
                 Designed & Developed by{' '}
                 <Link
-                    style={styles.logo}
+                    underline='none'
+                    href='#'
+                    className={classes.logo}
                     target='_blank'
-                    href='https://www.fistudios.io'
                 >
-                    Fi Studios, LLC.
+                    Filip Brej
                 </Link>
             </Typography>
         </Box>

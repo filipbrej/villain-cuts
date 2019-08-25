@@ -1,8 +1,7 @@
 import React from 'react';
 import AppBar from '@material-ui/core/AppBar';
 import { createMuiTheme } from '@material-ui/core/styles';
-import brown from '@material-ui/core/colors/brown';
-import grey from '@material-ui/core/colors/grey';
+import { brown, grey } from '@material-ui/core/colors/';
 import Tab from '@material-ui/core/Tab';
 import Tabs from '@material-ui/core/Tabs';
 import SwipeableViews from 'react-swipeable-views';
@@ -16,12 +15,11 @@ const theme = createMuiTheme({
 });
 
 export default function Navbar() {
-    // handles when different tabs are clicked
     const [value, setValue] = React.useState(1);
+
     const handleChange = (event, newValue) => {
         setValue(newValue);
     };
-
     return (
         <div>
             <ThemeProvider theme={theme}>
@@ -34,7 +32,7 @@ export default function Navbar() {
                     >
                         <Tab label='Contact' />
                         <Tab label='Home' />
-                        <Tab label='Portfolio' />
+                        <Tab label='My Work' />
                     </Tabs>
                 </AppBar>
             </ThemeProvider>

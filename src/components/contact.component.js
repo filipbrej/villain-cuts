@@ -24,7 +24,6 @@ const styles = {
     },
     button: {
         color: green[800],
-        padding: '0.8rem',
         fontSize: '1rem'
     },
     textfield: {
@@ -95,7 +94,11 @@ class ContactForm extends Component {
         return (
             <Box className={classes.container}>
                 <Paper elevation='3' style={{ minWidth: '40%' }}>
-                    <form method='POST' className={classes.root}>
+                    <form
+                        method='POST'
+                        data-netlify='true'
+                        className={classes.root}
+                    >
                         <Typography variant='h4'>CONTACT ME</Typography>
                         <Typography variant='subtitle1'>
                             Let's step up your style.
@@ -107,6 +110,7 @@ class ContactForm extends Component {
                             margin='normal'
                             variant='outlined'
                             label='Full Name'
+                            name='name'
                         />
                         <ContactTextField
                             style={styles.textfield}
@@ -115,8 +119,10 @@ class ContactForm extends Component {
                             margin='normal'
                             variant='outlined'
                             label='Email'
+                            name='email'
                         />
                         <ContactTextField
+                            name='phone'
                             style={styles.textfield}
                             required
                             variant='outlined'
@@ -129,6 +135,7 @@ class ContactForm extends Component {
                             }}
                         />
                         <ContactTextField
+                            name='message'
                             style={styles.textfield}
                             required
                             margin='normal'
