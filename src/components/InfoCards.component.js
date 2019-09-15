@@ -6,7 +6,6 @@ import Paper from '@material-ui/core/Paper';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUsers, faCut, faHandshake } from '@fortawesome/free-solid-svg-icons';
 import green from '@material-ui/core/colors/green';
-import { typography } from '@material-ui/system';
 
 const useStyles = makeStyles(theme => ({
     paper: {

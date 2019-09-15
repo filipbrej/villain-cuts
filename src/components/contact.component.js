@@ -108,7 +108,7 @@ class ContactForm extends Component {
                             style={styles.textfield}
                             required
                             margin='normal'
-                            variant='outlined'
+                            variant='standard'
                             label='Full Name'
                             name='name'
                         />
@@ -117,7 +117,7 @@ class ContactForm extends Component {
                             type='email'
                             required
                             margin='normal'
-                            variant='outlined'
+                            variant='standard'
                             label='Email'
                             name='email'
                         />
@@ -125,7 +125,7 @@ class ContactForm extends Component {
                             name='phone'
                             style={styles.textfield}
                             required
-                            variant='outlined'
+                            variant='standard'
                             label='Phone Number'
                             margin='normal'
                             InputProps={{
@@ -141,7 +141,7 @@ class ContactForm extends Component {
                             margin='normal'
                             multiline
                             rows='5'
-                            variant='outlined'
+                            variant='filled'
                             label='Message'
                             helperText='* input is required'
                         />

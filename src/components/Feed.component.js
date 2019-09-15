@@ -20,8 +20,8 @@ const useStyles = makeStyles({
         margin: '1rem'
     },
     media: {
-        height: 450,
-        width: 450
+        height: 400,
+        width: 400
     },
     link: {
         color: 'black'
@@ -37,7 +37,7 @@ const tileData = [
     },
     {
         img: cut2,
-        review: '"Ryan takes his time and never"',
+        review: '"Ryan takes his time and helps me feel comfortable."',
         name: 'Insoo'
     },
     {
