@@ -62,18 +62,13 @@ TextMaskCustom.propTypes = {
     inputRef: PropTypes.func.isRequired
 };
 
-const ContactTextField = withStyles({
+const StyledTextField = withStyles({
     root: {
         '& label.Mui-focused': {
             color: 'green'
         },
         '& .MuiInput-underline:after': {
             borderBottomColor: 'green'
-        },
-        '& .MuiOutlinedInput-root': {
-            '&.Mui-focused fieldset': {
-                borderColor: 'green'
-            }
         }
     }
 })(TextField);
@@ -104,7 +99,7 @@ class ContactForm extends Component {
                             Let's step up your style.
                         </Typography>
 
-                        <ContactTextField
+                        <StyledTextField
                             style={styles.textfield}
                             required
                             margin='normal'
@@ -112,7 +107,7 @@ class ContactForm extends Component {
                             label='Full Name'
                             name='name'
                         />
-                        <ContactTextField
+                        <StyledTextField
                             style={styles.textfield}
                             type='email'
                             required
@@ -121,7 +116,7 @@ class ContactForm extends Component {
                             label='Email'
                             name='email'
                         />
-                        <ContactTextField
+                        <StyledTextField
                             name='phone'
                             style={styles.textfield}
                             required
@@ -134,7 +129,7 @@ class ContactForm extends Component {
                                 onChange: this.handleChange('textmask')
                             }}
                         />
-                        <ContactTextField
+                        <StyledTextField
                             name='message'
                             style={styles.textfield}
                             required
@@ -142,6 +137,7 @@ class ContactForm extends Component {
                             multiline
                             rows='5'
                             variant='filled'
+                            disableUnderline
                             label='Message'
                             helperText='* input is required'
                         />

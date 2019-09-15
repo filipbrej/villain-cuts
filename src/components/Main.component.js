@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import AppBar from '@material-ui/core/AppBar';
 import Background from '../img/background.jpg';
 import Box from '@material-ui/core/Box';
-import { createMuiTheme, makeStyles, useTheme } from '@material-ui/core/styles';
+import { createMuiTheme, makeStyles } from '@material-ui/core/styles';
 import { brown, grey } from '@material-ui/core/colors/';
 import Tab from '@material-ui/core/Tab';
 import Tabs from '@material-ui/core/Tabs';
@@ -39,13 +39,6 @@ TabPanel.propTypes = {
     value: PropTypes.any.isRequired
 };
 
-function a11yProps(index) {
-    return {
-        id: `full-width-tab-${index}`,
-        'aria-controls': `full-width-tabpanel-${index}`
-    };
-}
-
 // Create colors for app bar
 const theme = createMuiTheme({
     palette: {
@@ -54,7 +47,7 @@ const theme = createMuiTheme({
     }
 });
 
-// background for each tab
+// background for each tab panel
 const useStyles = makeStyles(theme => ({
     root: {
         background: `url(${Background}) center/cover`,
@@ -64,7 +57,7 @@ const useStyles = makeStyles(theme => ({
     }
 }));
 
-export default function Navbar() {
+export default function Main() {
     const classes = useStyles();
     const [value, setValue] = React.useState(1);
 
@@ -77,6 +70,9 @@ export default function Navbar() {
     const handleChangeIndex = index => {
         setValue(index);
     };
+
+    // handles switching to contact tab when button is clicked from home section
+    const handleClick = (event, newValue) => {};
     return (
         <div className={classes.root}>
             <ThemeProvider theme={theme}>
@@ -86,7 +82,6 @@ export default function Navbar() {
                         variant='fullWidth'
                         value={value}
                         onChange={handleChange}
-                        aria-label='full width tabs example'
                     >
                         <Tab label='Contact' />
                         <Tab label='Home' />
@@ -100,14 +95,13 @@ export default function Navbar() {
                     onChangeIndex={handleChangeIndex}
                 >
                     <TabPanel value={value} index={0} dir={theme.direction}>
-                        <ContactForm></ContactForm>
+                        <ContactForm />
                     </TabPanel>
                     <TabPanel value={value} index={1} dir={theme.direction}>
-                        <Home></Home>
+                        <Home />
                     </TabPanel>
                     <TabPanel value={value} index={2} dir={theme.direction}>
-                        {' '}
-                        <Feed></Feed>
+                        <Feed />
                     </TabPanel>
                 </SwipeableViews>
             </ThemeProvider>

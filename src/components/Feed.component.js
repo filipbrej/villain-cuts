@@ -3,7 +3,7 @@ import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Grid from '@material-ui/core/Grid';
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles, withStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 
 // Images for the data model
@@ -14,14 +14,17 @@ import cut4 from '../img/cut4.jpg';
 import cut5 from '../img/cut5.jpg';
 import cut6 from '../img/cut6.jpg';
 
+const styles = theme => ({});
+
 // Styling
 const useStyles = makeStyles({
     item: {
-        margin: '1rem'
+        margin: '1rem',
+        maxWidth: 300
     },
     media: {
-        height: 400,
-        width: 400
+        height: 300,
+        width: 300
     },
     link: {
         color: 'black'
