@@ -11,7 +11,7 @@ const useStyles = makeStyles({
         flexDirection: 'column',
         alignItems: 'center',
         width: '100%',
-        height: 'calc(95vh - 137px)',
+        height: 'calc(100vh - 115px)',
         background: `url(${Background}) center/cover`,
         backgroundSize: 'cover'
     },

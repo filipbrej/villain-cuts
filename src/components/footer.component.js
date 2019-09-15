@@ -56,7 +56,7 @@ const Footer = () => {
                     className={classes.logo}
                     target='_blank'
                 >
-                    Filip Brej
+                    Fi Studios
                 </Link>
             </Typography>
         </Box>
