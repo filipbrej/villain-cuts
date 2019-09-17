@@ -3,7 +3,7 @@ import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Grid from '@material-ui/core/Grid';
-import { makeStyles, withStyles } from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 
 // Images for the data model
@@ -14,20 +14,36 @@ import cut4 from '../img/cut4.jpg';
 import cut5 from '../img/cut5.jpg';
 import cut6 from '../img/cut6.jpg';
 
-const styles = theme => ({});
+/* 
+Screen Breakpoints: 
 
-// Styling
-const useStyles = makeStyles({
+xs: 0px
+sm: 600px
+md: 960px
+lg: 1280px
+xl: 1920px
+
+*/
+
+const styles = theme => ({
     item: {
         margin: '1rem',
-        maxWidth: 300
+        maxWidth: 300,
+        [theme.breakpoints.down('xl')]: {},
+        [theme.breakpoints.down('lg')]: {},
+        [theme.breakpoints.down('md')]: {},
+        [theme.breakpoints.down('sm')]: {},
+        [theme.breakpoints.down('xs')]: {}
     },
     media: {
         height: 300,
-        width: 300
-    },
-    link: {
-        color: 'black'
+        width: 300,
+
+        [theme.breakpoints.down('xl')]: {},
+        [theme.breakpoints.down('lg')]: {},
+        [theme.breakpoints.down('md')]: {},
+        [theme.breakpoints.down('sm')]: {},
+        [theme.breakpoints.down('xs')]: {}
     }
 });
 
@@ -64,9 +80,8 @@ const tileData = [
         name: 'Erick'
     }
 ];
-
-export default function Feed() {
-    const classes = useStyles();
+const Feed = props => {
+    const { classes } = props;
     return (
         <div>
             <Grid container justify='center'>
@@ -94,4 +109,6 @@ export default function Feed() {
             </Grid>
         </div>
     );
-}
+};
+
+export default withStyles(styles)(Feed);

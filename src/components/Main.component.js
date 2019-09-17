@@ -3,8 +3,9 @@ import PropTypes from 'prop-types';
 import AppBar from '@material-ui/core/AppBar';
 import Background from '../img/background.jpg';
 import Box from '@material-ui/core/Box';
+import Button from '@material-ui/core/Button';
 import { createMuiTheme, makeStyles } from '@material-ui/core/styles';
-import { brown, grey } from '@material-ui/core/colors/';
+import { brown, green, grey } from '@material-ui/core/colors/';
 import Tab from '@material-ui/core/Tab';
 import Tabs from '@material-ui/core/Tabs';
 import SwipeableViews from 'react-swipeable-views';
@@ -13,7 +14,6 @@ import Typography from '@material-ui/core/Typography';
 
 // Components for swipeable views
 import ContactForm from './Contact.component';
-import Home from './Home.component';
 import Feed from './Feed.component';
 
 function TabPanel(props) {
@@ -47,13 +47,65 @@ const theme = createMuiTheme({
     }
 });
 
-// background for each tab panel
+/* 
+Screen Breakpoints: 
+
+xs: 0px
+sm: 600px
+md: 960px
+lg: 1280px
+xl: 1920px
+
+*/
+
+// Styling for main section
 const useStyles = makeStyles(theme => ({
     root: {
         background: `url(${Background}) center/cover`,
         backgroundSize: 'cover',
         width: '100%',
         height: 'calc(100vh-115px)'
+    },
+    box: {
+        width: '100%',
+        height: '70vh'
+    },
+    text: {
+        color: 'white',
+        textShadow: '3px 3px 3px #000',
+        marginBottom: '1rem',
+        [theme.breakpoints.down('xl')]: {
+            fontSize: '7rem'
+        },
+        [theme.breakpoints.down('lg')]: {
+            fontSize: '4rem'
+        },
+        [theme.breakpoints.down('md')]: {
+            fontSize: '4rem'
+        },
+        [theme.breakpoints.down('sm')]: {
+            fontSize: '3rem'
+        },
+        [theme.breakpoints.down('xs')]: {
+            fontSize: '3rem'
+        }
+    },
+    button: {
+        [theme.breakpoints.down('xl')]: {
+            fontSize: '3rem'
+        },
+        [theme.breakpoints.down('lg')]: {
+            fontSize: '2rem'
+        },
+        [theme.breakpoints.down('md')]: {
+            fontSize: '2rem'
+        },
+        [theme.breakpoints.down('sm')]: {
+            fontSize: '1.5rem'
+        },
+        [theme.breakpoints.down('xs')]: {
+            fontSize: '1.5rem'
+        }
     }
 }));
 
@@ -72,7 +124,9 @@ export default function Main() {
     };
 
     // handles switching to contact tab when button is clicked from home section
-    const handleClick = (event, newValue) => {};
+    const handleClick = (event, newValue) => {
+        setValue(0);
+    };
     return (
         <div className={classes.root}>
             <ThemeProvider theme={theme}>
@@ -98,7 +152,32 @@ export default function Main() {
                         <ContactForm />
                     </TabPanel>
                     <TabPanel value={value} index={1} dir={theme.direction}>
-                        <Home />
+                        <Box
+                            className={classes.box}
+                            display='flex'
+                            justifyContent='center'
+                            alignItems='center'
+                            flexDirection='column'
+                        >
+                            <Typography
+                                className={classes.text}
+                                align='center'
+                                variant='h3'
+                            >
+                                {'Make an appointment today.'}
+                            </Typography>
+                            <Button
+                                onClick={handleClick}
+                                className={classes.button}
+                                style={{
+                                    backgroundColor: green[800],
+                                    color: 'white',
+                                    padding: '0 1rem'
+                                }}
+                            >
+                                Contact Me
+                            </Button>
+                        </Box>
                     </TabPanel>
                     <TabPanel value={value} index={2} dir={theme.direction}>
                         <Feed />
