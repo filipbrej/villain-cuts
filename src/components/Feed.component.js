@@ -25,25 +25,29 @@ xl: 1920px
 
 */
 
+// Screen sizes
+const xlSize = 350;
+const lgSize = 250;
+const mdSize = 250;
+const smSize = 200;
+const xsSize = 200;
+
+// Styles for each component
 const styles = theme => ({
     item: {
         margin: '1rem',
-        maxWidth: 300,
-        [theme.breakpoints.down('xl')]: {},
-        [theme.breakpoints.down('lg')]: {},
-        [theme.breakpoints.down('md')]: {},
-        [theme.breakpoints.down('sm')]: {},
-        [theme.breakpoints.down('xs')]: {}
+        [theme.breakpoints.down('xl')]: { maxWidth: xlSize },
+        [theme.breakpoints.down('lg')]: { maxWidth: lgSize },
+        [theme.breakpoints.down('md')]: { maxWidth: mdSize },
+        [theme.breakpoints.down('sm')]: { maxWidth: smSize },
+        [theme.breakpoints.down('xs')]: { maxWidth: xsSize }
     },
     media: {
-        height: 300,
-        width: 300,
-
-        [theme.breakpoints.down('xl')]: {},
-        [theme.breakpoints.down('lg')]: {},
-        [theme.breakpoints.down('md')]: {},
-        [theme.breakpoints.down('sm')]: {},
-        [theme.breakpoints.down('xs')]: {}
+        [theme.breakpoints.down('xl')]: { height: xlSize, width: xlSize },
+        [theme.breakpoints.down('lg')]: { height: lgSize, width: lgSize },
+        [theme.breakpoints.down('md')]: { height: mdSize, width: mdSize },
+        [theme.breakpoints.down('sm')]: { height: smSize, width: smSize },
+        [theme.breakpoints.down('xs')]: { height: xsSize, width: xsSize }
     }
 });
 

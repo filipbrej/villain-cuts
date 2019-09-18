@@ -7,6 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUsers, faCut, faHandshake } from '@fortawesome/free-solid-svg-icons';
 import green from '@material-ui/core/colors/green';
 
+// Styling for each component
 const useStyles = makeStyles(theme => ({
     paper: {
         margin: theme.spacing(2),

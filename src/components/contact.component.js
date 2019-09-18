@@ -9,12 +9,17 @@ import TextField from '@material-ui/core/TextField';
 import Typography from '@material-ui/core/Typography';
 import { green } from '@material-ui/core/colors/';
 
+// Styles for each component
 const styles = {
     container: {
         margin: '1rem',
         display: 'flex',
         alignItems: 'center',
-        justifyContent: 'center'
+        justifyContent: 'center',
+        textAlign: 'center'
+    },
+    paper: {
+        width: '500px'
     },
     root: {
         margin: '1rem',
@@ -23,14 +28,14 @@ const styles = {
         alignItems: 'center'
     },
     button: {
-        color: green[800],
-        fontSize: '1rem'
+        color: green[800]
     },
     textfield: {
         minWidth: '75%'
     }
 };
 
+// Text Mask for phone field
 const TextMaskCustom = props => {
     const { inputRef, ...other } = props;
 
@@ -62,6 +67,7 @@ TextMaskCustom.propTypes = {
     inputRef: PropTypes.func.isRequired
 };
 
+// Styles the text fields
 const StyledTextField = withStyles({
     root: {
         '& label.Mui-focused': {
@@ -73,53 +79,75 @@ const StyledTextField = withStyles({
     }
 })(TextField);
 
+const encode = data => {
+    return Object.keys(data)
+        .map(
+            key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key])
+        )
+        .join('&');
+};
+
 class ContactForm extends Component {
     state = {
         textmask: ''
     };
 
+    // Handles state for input fields
     handleChange = name => event => {
         this.setState({
             [name]: event.target.value
         });
     };
 
+    // Handles form submission through Netlify
+    handleSubmit = e => {
+        fetch('/', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: encode({ 'form-name': 'contact', ...this.state })
+        })
+            .then(() => alert('success'))
+            .catch(error => alert('error'));
+
+        e.preventDefault();
+    };
+
     render() {
         const { classes } = this.props;
         return (
             <Box className={classes.container}>
-                <Paper elevation='3' style={{ minWidth: '40%' }}>
-                    <form
-                        method='POST'
-                        data-netlify='true'
-                        className={classes.root}
-                    >
+                <Paper elevation='3' className={classes.paper}>
+                    <form onSubmit={this.handleSubmit} className={classes.root}>
                         <Typography variant='h4'>CONTACT ME</Typography>
-                        <Typography variant='subtitle1'>
+                        <Typography variant='subtitle1' color='textSecondary'>
                             Let's step up your style.
                         </Typography>
 
                         <StyledTextField
                             style={styles.textfield}
                             required
+                            type='text'
+                            name='name'
                             margin='normal'
                             variant='standard'
                             label='Full Name'
-                            name='name'
+                            onChange={this.handleChange}
                         />
                         <StyledTextField
                             style={styles.textfield}
-                            type='email'
                             required
+                            type='email'
+                            name='email'
                             margin='normal'
                             variant='standard'
                             label='Email'
-                            name='email'
+                            onChange={this.handleChange}
                         />
                         <StyledTextField
-                            name='phone'
                             style={styles.textfield}
                             required
+                            name='phone'
+                            type='tel'
                             variant='standard'
                             label='Phone Number'
                             margin='normal'
@@ -130,18 +158,25 @@ class ContactForm extends Component {
                             }}
                         />
                         <StyledTextField
-                            name='message'
                             style={styles.textfield}
                             required
+                            name='message'
+                            type='text'
                             margin='normal'
                             multiline
                             rows='5'
                             variant='filled'
-                            disableUnderline
                             label='Message'
                             helperText='* input is required'
+                            onChange={this.handleChange}
                         />
-                        <Button className={classes.button}>Submit</Button>
+                        <Button
+                            size='medium'
+                            type='submit'
+                            className={classes.button}
+                        >
+                            Submit
+                        </Button>
                     </form>
                 </Paper>
             </Box>

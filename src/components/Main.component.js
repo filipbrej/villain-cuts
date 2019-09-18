@@ -16,6 +16,7 @@ import Typography from '@material-ui/core/Typography';
 import ContactForm from './Contact.component';
 import Feed from './Feed.component';
 
+// Swipeable area in tabs
 function TabPanel(props) {
     const { children, value, index, ...other } = props;
 
@@ -68,7 +69,7 @@ const useStyles = makeStyles(theme => ({
     },
     box: {
         width: '100%',
-        height: '70vh'
+        height: '50vh'
     },
     text: {
         color: 'white',
@@ -187,3 +188,7 @@ export default function Main() {
         </div>
     );
 }
+
+Main.propTypes = {
+    classes: PropTypes.object.isRequired
+};

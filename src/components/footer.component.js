@@ -10,6 +10,7 @@ import grey from '@material-ui/core/colors/grey';
 import Link from '@material-ui/core/Link';
 import Typography from '@material-ui/core/Typography';
 
+// Styling for footer components
 const useStyles = makeStyles({
     link: {
         margin: '1rem 1.5rem',
@@ -29,9 +30,6 @@ const Footer = () => {
             alignItems='center'
             justifyItems='center'
         >
-            {/* <Typography align='center' variant='h4'>
-                Follow us on social media!
-            </Typography> */}
             <Typography gutterBottom>
                 <Link
                     target='_blank'
