@@ -50,11 +50,11 @@ const Footer = () => {
                 Designed & Developed by{' '}
                 <Link
                     underline='none'
-                    href='#'
+                    href='codebyfil.dev'
                     className={classes.logo}
                     target='_blank'
                 >
-                    Fi Studios
+                    Filip Brej
                 </Link>
             </Typography>
         </Box>

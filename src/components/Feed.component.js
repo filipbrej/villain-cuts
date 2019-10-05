@@ -2,7 +2,9 @@ import React from 'react';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
+import green from '@material-ui/core/colors/green';
 import Grid from '@material-ui/core/Grid';
+import Link from '@material-ui/core/Link';
 import { withStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 
@@ -15,7 +17,7 @@ import cut5 from '../img/cut5.jpg';
 import cut6 from '../img/cut6.jpg';
 
 /* 
-Screen Breakpoints: 
+Screen Breakpoints (from Material UI docs): 
 
 xs: 0px
 sm: 600px
@@ -48,40 +50,43 @@ const styles = theme => ({
         [theme.breakpoints.down('md')]: { height: mdSize, width: mdSize },
         [theme.breakpoints.down('sm')]: { height: smSize, width: smSize },
         [theme.breakpoints.down('xs')]: { height: xsSize, width: xsSize }
+    },
+    link: {
+        color: green[800]
     }
 });
 
-// Model data for each tile in the grid
+// Model for reviews and photos
 const tileData = [
     {
         img: cut1,
-        review: '"Consistently does an excellent job."',
-        name: ''
+        review: 'Consistently does an excellent job.',
+        link: 'https://www.instagram.com/p/BTIX3Acld9b/'
     },
     {
         img: cut2,
-        review: '"Ryan takes his time and helps me feel comfortable."',
-        name: 'Insoo'
+        review: 'Ryan takes his time and helps me feel comfortable.',
+        link: 'https://www.instagram.com/p/BTFQMmLFPII/'
     },
     {
         img: cut3,
         review: 'Always satisfied with my experience!',
-        name: ''
+        link: 'https://www.instagram.com/p/BRCVJ9PlY2A/'
     },
     {
         img: cut4,
         review: 'Ryan recognized what I wanted and delivered every time.',
-        name: ''
+        link: 'https://www.instagram.com/p/BPLhFBLj88B/'
     },
     {
         img: cut5,
-        review: '"One of the cleanest cuts I\'ve ever had."',
-        name: 'Filip'
+        review: "One of the cleanest cuts I've ever had.",
+        link: 'https://www.instagram.com/p/BPLgYmwDQFM/'
     },
     {
         img: cut6,
         review: 'Great quality cut for less than where I normally go!',
-        name: 'Erick'
+        link: 'https://www.instagram.com/p/BVQsT5ZFs3w/'
     }
 ];
 const Feed = props => {
@@ -97,14 +102,18 @@ const Feed = props => {
                                 image={tile.img}
                             ></CardMedia>
                             <CardContent>
-                                <Typography variant='body2'>
-                                    {tile.review}{' '}
+                                <Typography variant='body2' gutterBottom>
+                                    "{tile.review}"{' '}
                                 </Typography>
-                                <Typography
-                                    variant='subtitle2'
-                                    color='textSecondary'
-                                >
-                                    - {tile.name}
+                                <Typography variant='subtitle2'>
+                                    <Link
+                                        underline='none'
+                                        href={tile.link}
+                                        target='_blank'
+                                        className={classes.link}
+                                    >
+                                        VIEW ON INSTAGRAM
+                                    </Link>
                                 </Typography>
                             </CardContent>
                         </Card>
