@@ -13,8 +13,8 @@ import { ThemeProvider } from '@material-ui/styles';
 import Typography from '@material-ui/core/Typography';
 
 // Components for swipeable views
-import ContactForm from './Contact.component';
-import Feed from './Feed.component';
+import ContactForm from './contact';
+import Feed from './feed';
 
 // Swipeable area in tabs
 function TabPanel(props) {
