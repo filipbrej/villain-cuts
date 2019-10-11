@@ -50,7 +50,7 @@ const Footer = () => {
                 Designed & Developed by{' '}
                 <Link
                     underline='none'
-                    href='codebyfil.dev'
+                    href='https://www.codebyfil.dev'
                     className={classes.logo}
                     target='_blank'
                 >

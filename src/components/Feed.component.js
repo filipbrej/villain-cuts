@@ -60,22 +60,25 @@ const styles = theme => ({
 const tileData = [
     {
         img: cut1,
-        review: 'Consistently does an excellent job.',
+        review:
+            "Takes his time and I can talk to him honestly about the cut and he'll do whatever he can to make me leave satisfied.",
         link: 'https://www.instagram.com/p/BTIX3Acld9b/'
     },
     {
         img: cut2,
-        review: 'Ryan takes his time and helps me feel comfortable.',
+        review:
+            "He's been cutting my hair for years and hasn't disappointed once.",
         link: 'https://www.instagram.com/p/BTFQMmLFPII/'
     },
     {
         img: cut3,
-        review: 'Always satisfied with my experience!',
+        review: 'He always makes sure his friends have fresh fades.',
         link: 'https://www.instagram.com/p/BRCVJ9PlY2A/'
     },
     {
         img: cut4,
-        review: 'Ryan recognized what I wanted and delivered every time.',
+        review:
+            "Never found a barber on U of I's campus as good as Ryan after he graduated.",
         link: 'https://www.instagram.com/p/BPLhFBLj88B/'
     },
     {
@@ -85,7 +88,7 @@ const tileData = [
     },
     {
         img: cut6,
-        review: 'Great quality cut for less than where I normally go!',
+        review: 'You can\nt beat the price for the quality haircut.',
         link: 'https://www.instagram.com/p/BVQsT5ZFs3w/'
     }
 ];
