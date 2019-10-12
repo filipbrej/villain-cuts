@@ -119,6 +119,7 @@ class ContactForm extends Component {
 
     render() {
         const { classes } = this.props;
+        const { name, email, phone, textmask, message } = this.state;
         return (
             <Box className={classes.container}>
                 <Paper elevation='3' className={classes.paper}>
@@ -139,7 +140,7 @@ class ContactForm extends Component {
                             required
                             type='text'
                             name='name'
-                            value={name}
+                            value={this.name}
                             margin='normal'
                             variant='standard'
                             label='Full Name'
