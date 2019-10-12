@@ -92,6 +92,18 @@ class ContactForm extends Component {
         textmask: ''
     };
 
+    handleSubmit = e => {
+        fetch('/', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: encode({ 'form-name': 'contact', ...this.state })
+        })
+            .then(() => alert('Success!'))
+            .catch(error => alert(error));
+
+        e.preventDefault();
+    };
+
     // Handles state for input fields
     handleChange = name => event => {
         this.setState({
@@ -104,7 +116,7 @@ class ContactForm extends Component {
         return (
             <Box className={classes.container}>
                 <Paper elevation='3' className={classes.paper}>
-                    <form className={classes.root} netlify>
+                    <form className={classes.root} onSubmit={this.handleSubmit}>
                         <Typography variant='h4'>CONTACT ME</Typography>
                         <Typography variant='subtitle1' color='textSecondary'>
                             Let's step up your style.
