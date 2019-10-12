@@ -126,10 +126,8 @@ class ContactForm extends Component {
                     <form
                         className={classes.root}
                         onSubmit={this.handleSubmit}
-                        // name='contact'
-                        // method='POST'
-                        // data-netlify='true'
-                        // netlify='true'
+                        data-netlify='true'
+                        netlify='true'
                     >
                         <input type='hidden' name='form-name' value='contact' />
                         <Typography variant='h4'>CONTACT ME</Typography>
@@ -161,7 +159,7 @@ class ContactForm extends Component {
                         />
                         <StyledTextField
                             style={styles.textfield}
-                            required
+                            // required
                             name='phone'
                             type='tel'
                             value={this.textmask}
