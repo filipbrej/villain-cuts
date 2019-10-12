@@ -116,10 +116,11 @@ class ContactForm extends Component {
                 <Paper elevation='3' className={classes.paper}>
                     <form
                         className={classes.root}
-                        onSubmit={this.handleSubmit}
-                        data-netlify='true'
-                        netlify
+                        // onSubmit={this.handleSubmit}
+                        name='contact'
+                        method='POST'
                     >
+                        <input type='hidden' name='form-name' value='contact' />
                         <Typography variant='h4'>CONTACT ME</Typography>
                         <Typography variant='subtitle1' color='textSecondary'>
                             Let's step up your style.
