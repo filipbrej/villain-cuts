@@ -114,7 +114,12 @@ class ContactForm extends Component {
         return (
             <Box className={classes.container}>
                 <Paper elevation='3' className={classes.paper}>
-                    <form className={classes.root} onSubmit={this.handleSubmit}>
+                    <form
+                        className={classes.root}
+                        onSubmit={this.handleSubmit}
+                        data-netlify='true'
+                        netlify
+                    >
                         <Typography variant='h4'>CONTACT ME</Typography>
                         <Typography variant='subtitle1' color='textSecondary'>
                             Let's step up your style.
