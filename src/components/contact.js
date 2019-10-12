@@ -35,7 +35,7 @@ const styles = {
     }
 };
 
-// Text Mask for phone field
+// Text Mask for phone field to only allow 10 numbers
 const TextMaskCustom = props => {
     const { inputRef, ...other } = props;
 
@@ -79,7 +79,7 @@ const StyledTextField = withStyles({
     }
 })(TextField);
 
-// Adds attributes to form input fields
+// Adds attributes to form input fields for Netlify
 const encode = data => {
     return Object.keys(data)
         .map(
@@ -99,7 +99,7 @@ class ContactForm extends Component {
             message: ''
         };
     }
-
+    // Handles submission for Netlify form
     handleSubmit = e => {
         fetch('/', {
             method: 'POST',
@@ -119,7 +119,7 @@ class ContactForm extends Component {
 
     render() {
         const { classes } = this.props;
-        const { name, email, phone, textmask, message } = this.state;
+        const { name, email, textmask, message } = this.state;
         return (
             <Box className={classes.container}>
                 <Paper elevation='3' className={classes.paper}>
