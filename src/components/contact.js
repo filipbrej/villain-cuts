@@ -139,6 +139,7 @@ class ContactForm extends Component {
                             required
                             type='text'
                             name='name'
+                            value={name}
                             margin='normal'
                             variant='standard'
                             label='Full Name'
@@ -149,6 +150,7 @@ class ContactForm extends Component {
                             required
                             type='email'
                             name='email'
+                            value={email}
                             margin='normal'
                             variant='standard'
                             label='Email'
@@ -159,6 +161,7 @@ class ContactForm extends Component {
                             required
                             name='phone'
                             type='tel'
+                            value={textmask}
                             variant='standard'
                             label='Phone Number'
                             margin='normal'
@@ -173,6 +176,7 @@ class ContactForm extends Component {
                             required
                             name='message'
                             type='text'
+                            value={message}
                             margin='normal'
                             multiline
                             rows='5'
