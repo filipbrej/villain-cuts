@@ -108,8 +108,6 @@ class ContactForm extends Component {
         })
             .then(() => alert('Your message has been received!'))
             .catch(error => alert(error));
-
-        e.preventDefault();
     };
 
     // Handles state for input fields
@@ -161,7 +159,7 @@ class ContactForm extends Component {
                         />
                         <StyledTextField
                             style={styles.textfield}
-                            // required
+                            required
                             name='phone'
                             type='tel'
                             value={this.textmask}
@@ -171,8 +169,6 @@ class ContactForm extends Component {
                             onChange={this.handleChange}
                             InputProps={{
                                 inputComponent: TextMaskCustom
-                                // value: this.state.textmask,
-                                // onChange: this.handleChange('textmask')
                             }}
                         />
                         <StyledTextField
