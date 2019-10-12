@@ -167,8 +167,8 @@ class ContactForm extends Component {
                             label='Phone Number'
                             margin='normal'
                             InputProps={{
-                                inputComponent: TextMaskCustom,
-                                value: this.state.textmask
+                                inputComponent: TextMaskCustom
+                                // value: this.state.textmask,
                                 // onChange: this.handleChange('textmask')
                             }}
                         />
