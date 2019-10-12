@@ -105,7 +105,11 @@ class ContactForm extends Component {
             method: 'POST',
             headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
             body: encode({ 'form-name': 'contact', ...this.state })
-        }).then(() => alert('Your message has been received!'));
+        })
+            .then(() => alert('Your message has been received!'))
+            .catch(error => alert(error));
+
+        e.preventDefault();
     };
 
     // Handles state for input fields
