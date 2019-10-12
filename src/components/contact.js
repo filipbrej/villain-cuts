@@ -105,7 +105,9 @@ class ContactForm extends Component {
             method: 'POST',
             headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
             body: encode({ 'form-name': 'contact', ...this.state })
-        }).catch(error => alert(error));
+        })
+            .then(() => alert('Your message has been received!'))
+            .catch(error => alert(error));
 
         e.preventDefault();
     };
@@ -166,6 +168,7 @@ class ContactForm extends Component {
                             variant='standard'
                             label='Phone Number'
                             margin='normal'
+                            onChange={this.handleChange}
                             InputProps={{
                                 inputComponent: TextMaskCustom
                                 // value: this.state.textmask,
