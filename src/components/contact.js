@@ -126,10 +126,10 @@ class ContactForm extends Component {
                     <form
                         className={classes.root}
                         onSubmit={this.handleSubmit}
-                        name='contact'
-                        method='POST'
-                        data-netlify='true'
-                        netlify='true'
+                        // name='contact'
+                        // method='POST'
+                        // data-netlify='true'
+                        // netlify='true'
                     >
                         <input type='hidden' name='form-name' value='contact' />
                         <Typography variant='h4'>CONTACT ME</Typography>
