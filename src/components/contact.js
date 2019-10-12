@@ -88,9 +88,14 @@ const encode = data => {
 };
 
 class ContactForm extends Component {
-    state = {
-        textmask: ''
-    };
+    // constructor(props) {
+    //     super(props);
+    //     this.state = { name: '', email: '', phone: '', textmask: '' };
+    // }
+
+    // state = {
+    //     textmask: ''
+    // };
 
     handleSubmit = e => {
         fetch('/', {
