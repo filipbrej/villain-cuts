@@ -79,6 +79,7 @@ const StyledTextField = withStyles({
     }
 })(TextField);
 
+// Adds attributes to form input fields
 const encode = data => {
     return Object.keys(data)
         .map(
@@ -88,14 +89,16 @@ const encode = data => {
 };
 
 class ContactForm extends Component {
-    // constructor(props) {
-    //     super(props);
-    //     this.state = { name: '', email: '', phone: '', textmask: '' };
-    // }
-
-    // state = {
-    //     textmask: ''
-    // };
+    constructor(props) {
+        super(props);
+        this.state = {
+            name: '',
+            email: '',
+            phone: '',
+            textmask: '',
+            message: ''
+        };
+    }
 
     handleSubmit = e => {
         fetch('/', {
@@ -121,7 +124,7 @@ class ContactForm extends Component {
                 <Paper elevation='3' className={classes.paper}>
                     <form
                         className={classes.root}
-                        // onSubmit={this.handleSubmit}
+                        onSubmit={this.handleSubmit}
                         name='contact'
                         method='POST'
                     >
