@@ -168,8 +168,8 @@ class ContactForm extends Component {
                             margin='normal'
                             InputProps={{
                                 inputComponent: TextMaskCustom,
-                                value: this.state.textmask,
-                                onChange: this.handleChange('textmask')
+                                value: this.state.textmask
+                                // onChange: this.handleChange('textmask')
                             }}
                         />
                         <StyledTextField
