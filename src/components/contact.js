@@ -99,23 +99,12 @@ class ContactForm extends Component {
         });
     };
 
-    // Handles form submission through Netlify
-    handleSubmit = e => {
-        fetch('/', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-            body: encode({ 'form-name': 'contact', ...this.state })
-        }).catch(error => alert('error'));
-
-        e.preventDefault();
-    };
-
     render() {
         const { classes } = this.props;
         return (
             <Box className={classes.container}>
                 <Paper elevation='3' className={classes.paper}>
-                    <form onSubmit={this.handleSubmit} className={classes.root}>
+                    <form className={classes.root} netlify>
                         <Typography variant='h4'>CONTACT ME</Typography>
                         <Typography variant='subtitle1' color='textSecondary'>
                             Let's step up your style.
