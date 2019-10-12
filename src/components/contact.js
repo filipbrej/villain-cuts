@@ -111,9 +111,9 @@ class ContactForm extends Component {
     };
 
     // Handles state for input fields
-    handleChange = name => event => {
+    handleChange = e => {
         this.setState({
-            [name]: event.target.value
+            [e.target.name]: e.target.value
         });
     };
 
