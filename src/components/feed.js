@@ -88,7 +88,7 @@ const tileData = [
     },
     {
         img: cut6,
-        review: 'You can\nt beat the price for the quality haircut.',
+        review: "You can't beat the price for the quality haircut.",
         link: 'https://www.instagram.com/p/BVQsT5ZFs3w/'
     }
 ];
