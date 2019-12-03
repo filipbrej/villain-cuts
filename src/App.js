@@ -8,16 +8,16 @@ import Footer from './components/footer';
 
 function App() {
     return (
-        <div className='container'>
-            <main>
+        <main>
+            <div className='container'>
                 <Logo />
                 <Main />
                 <InfoCards />
-            </main>
-            <footer>
-                <Footer />
-            </footer>
-        </div>
+                <footer>
+                    <Footer />
+                </footer>
+            </div>
+        </main>
     );
 }
 
